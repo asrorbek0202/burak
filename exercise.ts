@@ -21,6 +21,7 @@ Moslashuvchanlik: Kod platformaga bog'liq emas. Python yoki Node.js o'rnatilgan 
 
 
 const person1: string = "Steve";
+let car: string = "Tesla";
 const count: number = 100;
 
 let stage : number | string = "hello"
@@ -32,6 +33,7 @@ interface Person {
     name: string,
     age: number,
     nation: string
+    gender?: string
 }
 
 const person : Person = {
@@ -94,8 +96,7 @@ console.log(laptop.getPrice()); // "1000 USD"
 //console.log(laptop.price);  // Xato! 'price' private xususiyat
 // user.id = 2; // Xato! readonly bo'lgani uchun o'zgartirib bo'lmaydi
 
-
-// https://www.typescripttutorial.net/
+ //https://www.typescripttutorial.net/
 
 
 /*.    

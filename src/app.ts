@@ -1,5 +1,6 @@
 import express from "express";
-import path from "path";  // u fayl va papkalarning yoʻllarini (path/pathway) har qanday operatsion sistemada toʻgʻri va xatosiz ulash (birlashtirish) uchun kerak.
+import path from "path";
+import router from "./router"
 
 /** 1- ENTRANCE **/
 
@@ -16,5 +17,6 @@ app.use(express.json());
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 /** 4- ROUTERS **/
+app.use("/", router);  // middlaware design pattern
 
 export default app;
