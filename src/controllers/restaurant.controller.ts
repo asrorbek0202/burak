@@ -23,7 +23,7 @@ restaurantController.getSignup = (req: Request, res: Response) => {
     try{
         res.send("Signup Page");
     } catch (err) {
-        console.log("Error getSignup", err);$
+        console.log("Error getSignup", err);
     }
 };
 
