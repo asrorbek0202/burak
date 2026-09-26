@@ -1,15 +1,27 @@
+/*Project Standards:
+  - Logging standards
+  - Naming standards
+    function , method, variable => camel      goHome
+    class ==> pascal.     MemberService
+    folder ==> kebab 
+    css ==> snake.         button_style
+  - Error handling
+*/
+
+
+
 
 // TASK N:
 // Shunday function yozing, u string qabul qilsin va string palindrom yani togri oqilganda ham, orqasidan oqilganda ham bir hil oqiladigan soz ekanligini aniqlab boolean qiymat qaytarsin.
 // MASALAN: palindromCheck("dad") return true;  palindromCheck("son") return false;
 
-function palindromCheck(word: string): boolean{
-    const yangiSoz = word.split("").reverse().join(""); 
-    return yangiSoz === word;
-}
+// function palindromCheck(word: string): boolean{
+//     const yangiSoz = word.split("").reverse().join(""); 
+//     return yangiSoz === word;
+// }
 
-console.log(palindromCheck("dad")); 
-console.log(palindromCheck("son"));
+// console.log(palindromCheck("dad")); 
+// console.log(palindromCheck("son"));
 
 /*
 TASK M: 
