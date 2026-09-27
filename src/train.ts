@@ -6,6 +6,11 @@
     folder ==> kebab 
     css ==> snake.         button_style
   - Error handling
+
+
+  traditional API
+  rest API
+  GraphQL API 
 */
 
 
