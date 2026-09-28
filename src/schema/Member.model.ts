@@ -1,6 +1,5 @@
 import mongoose, {Schema} from "mongoose";
 import { MemberStatus, MemberType } from "../libs/enums/member.enum";
-import { defineLocale } from "moment";
 
 const memberSchema = new Schema({
     memberType:{
