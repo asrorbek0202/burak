@@ -32,9 +32,11 @@ restaurantController.getSignup = (req: Request, res: Response) => {
     }
 };
 
+// define
 restaurantController.processLogin = async (req: Request, res: Response) => {
     try{
         console.log("processLogin")
+        
         console.log("body", req.body)
         const Input: LoginInput = req.body;
 

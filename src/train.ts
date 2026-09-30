@@ -1,3 +1,19 @@
+/* 
+TASK P:
+
+Parametr sifatida yagona object qabul qiladigan function yozing.
+Qabul qilingan objectni nested array sifatida convert qilib qaytarsin
+
+MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
+*/
+
+
+function objectToArray(obj: Record<string, any>): [string, any][] {
+    return Object.entries(obj);
+}
+console.log(objectToArray({ a: 10, b: 20 }));
+
+
 
 /*. 
 TASK O:
@@ -11,19 +27,19 @@ Yuqoridagi misolda array tarkibida faqatgina ikkita yagona son mavjud bular 10 h
 Qolganlari nested bo'lib yoki type'lari number emas.
 
 */
-function calculateSumOfNumbers(ary: any[]): number {
-    let yigindi = 0;
+// function calculateSumOfNumbers(ary: any[]): number {
+//     let yigindi = 0;
 
-    for (let element of ary) {
-        if (typeof element === "number") {
-            yigindi += element;
-        }
-    }
+//     for (let element of ary) {
+//         if (typeof element === "number") {
+//             yigindi += element;
+//         }
+//     }
 
-    return yigindi;
-}
+//     return yigindi;
+// }
 
-console.log(calculateSumOfNumbers([10, "10", {son: 10}, true, 35])); 
+// console.log(calculateSumOfNumbers([10, "10", {son: 10}, true, 35])); 
 
 /*Project Standards:
   - Logging standards
