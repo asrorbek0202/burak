@@ -59,7 +59,7 @@ restaurantController.processSignup = async (req: AdminRequest, res: Response) =>
         
     }
 };
-
+// define
 restaurantController.processLogin = async (req: AdminRequest, res: Response) => {
     try{
         console.log("processLogin")
