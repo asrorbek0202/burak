@@ -18,13 +18,12 @@ const store = new MongoDBStore({
 /** 1- ENTRANCE **/
 
 const app = express();
-console.log("__dirname:", __dirname);
 app.use(express.static(path.join(__dirname, "public"))); // midlware
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(morgan(MORGAN_FORMAT));
 
-/** 2- SESSIONS **/
+/** 2- SESSIONS. ==> tamg'a **/
 
 app.use(
     session({
@@ -48,7 +47,7 @@ app.use(function(req, res, next){
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-/** 4- ROUTERS **/
+/** 4- ROUTERS ===> yo'nalish**/
 app.use("/admin", routerAdmin);  // SSR EJS
 app.use("/", router);  // SPA react
 export default app;
