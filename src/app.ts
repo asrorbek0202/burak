@@ -6,6 +6,7 @@ import morgan from "morgan";
 import { MORGAN_FORMAT } from "./libs/config";
 
 import session from "express-session";
+// tcp connection2 
 import ConnectMongoDB from "connect-mongodb-session";
 import { T } from "./libs/types/common";
 
@@ -41,7 +42,7 @@ app.use(function(req, res, next){
     res.locals.member = sessionInstance.member;
     next();
 })
-
+// req.session
 /** 3- VIEWS **/
 
 app.set("views", path.join(__dirname, "views"));
@@ -50,4 +51,5 @@ app.set("view engine", "ejs");
 /** 4- ROUTERS ===> yo'nalish**/
 app.use("/admin", routerAdmin);  // SSR EJS
 app.use("/", router);  // SPA react
+
 export default app;
