@@ -20,7 +20,6 @@ function countOccurrences(data: object, info: string): number{
 
     const value = (data as Record<string, unknown>)[key];
 
-    // Qiymat object bo'lsa (null emas), ichiga kirib sanaymiz
     if (typeof value === "object" && value !== null) {
       count += countOccurrences(value, info);
     }
@@ -28,6 +27,19 @@ function countOccurrences(data: object, info: string): number{
   return count;
 }
 console.log(countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model'));
+const test = {
+  status: "active",
+  user: {
+    status: "pending",
+    profile: {
+      status: "verified",
+      settings: {
+        theme: "dark"
+      }
+    }
+  }
+};
+console.log("Test  (status):", countOccurrences(test, "status"));
 /**
  * 
  TASK W
