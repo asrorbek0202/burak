@@ -1,3 +1,22 @@
+/* TASK Y
+
+Shunday function yozing, uni 2'ta array parametri bo'lsin.
+Bu function ikkala arrayda ham ishtirok etgan bir xil
+qiymatlarni yagona arrayga joylab qaytarsin.
+
+MASALAN: findIntersection([1,2,3], [3,2,0]) return [2,3]
+
+Yuqoridagi misolda, argument sifatida berilayotgan array'larda
+o'xshash sonlar mavjud. Function'ning vazifasi esa ana shu
+ikkala array'da ishtirok etgan o'xshash sonlarni yagona arrayga
+joylab return qilmoqda.
+*/ 
+
+function findIntersection(ary: number[], ary2: number[]): number[] {
+  return ary.filter((element) => ary2.includes(element));
+}
+
+console.log(findIntersection([1, 2, 3], [3, 2, 0])); 
 /**. TASK X
 
 Shunday function yozing, uni object va string parametrlari bo'lsin.
@@ -13,33 +32,33 @@ Funktsiya, shu ikkinchi argument 'model', birinchi argument object
 tarkibida kalit sifatida 2 marotaba takrorlanganligi uchun 2 soni return qilmoqda
 **/
 
-function countOccurrences(data: object, info: string): number{
-  let count = 0;
-  for (const key in data) {
-    if (key === info) count++;
+// function countOccurrences(data: object, info: string): number{
+//   let count = 0;
+//   for (const key in data) {
+//     if (key === info) count++;
 
-    const value = (data as Record<string, unknown>)[key];
+//     const value = (data as Record<string, unknown>)[key];
 
-    if (typeof value === "object" && value !== null) {
-      count += countOccurrences(value, info);
-    }
-  }
-  return count;
-}
-console.log(countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model'));
-const test = {
-  status: "active",
-  user: {
-    status: "pending",
-    profile: {
-      status: "verified",
-      settings: {
-        theme: "dark"
-      }
-    }
-  }
-};
-console.log("Test  (status):", countOccurrences(test, "status"));
+//     if (typeof value === "object" && value !== null) {
+//       count += countOccurrences(value, info);
+//     }
+//   }
+//   return count;
+// }
+// console.log(countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model'));
+// const test = {
+//   status: "active",
+//   user: {
+//     status: "pending",
+//     profile: {
+//       status: "verified",
+//       settings: {
+//         theme: "dark"
+//       }
+//     }
+//   }
+// };
+// console.log("Test  (status):", countOccurrences(test, "status"));
 /**
  * 
  TASK W
