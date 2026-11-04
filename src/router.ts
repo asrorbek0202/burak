@@ -32,7 +32,7 @@ router.get("/member/top-users", memberController.getTopUsers)
 /** Product **/ 
 
 router.get("/product/all", productController.getProducts);
-router.get("/product/:id", memberController.verifyAuth, productController.getProduct);
+router.get("/product/:id",  memberController.retrieveAuth, productController.getProduct);
 
 /** Order **/ 
 router.post("/order/create",

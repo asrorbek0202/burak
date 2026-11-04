@@ -7,7 +7,7 @@ import { T } from "../libs/types/common";
 import { ObjectId } from "mongoose";
 import ViewService from "./View.service";
 import { ViewInput } from "../libs/types/view";
-import { ViewGroup } from "../libs/enums/View.enum";
+import { ViewGroup } from "../libs/enums/view.enum";
 
 class ProductService {
     private readonly productModel;
