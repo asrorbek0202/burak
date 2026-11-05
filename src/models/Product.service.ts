@@ -33,7 +33,7 @@ if (inquiry.search)
       ? { [inquiry.order]: 1 }
       : { [inquiry.order]: -1 };
 
-  const result = await this.productModel
+      const result = await this.productModel
     .aggregate([
       { $match: match },
       { $sort: sort },
