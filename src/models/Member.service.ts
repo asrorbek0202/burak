@@ -111,9 +111,9 @@ public async addUserPoint(member: Member, point: number): Promise<Member> {
         _id: memberId,
         memberType: MemberType.USER,
         memberStatus: MemberStatus.ACTIVE,
-      },
-      { $inc: { memberPoints: point } },
-      { new: true }
+      },// filter
+      { $inc: { memberPoints: point } },// update
+      { new: true }// options
     )
     .exec();
 }

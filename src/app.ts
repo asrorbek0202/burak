@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from "express";
 import path from "path";
 import router from "./router"
@@ -25,6 +26,10 @@ app.use(express.static(path.join(__dirname, "public"))); // midlware
 app.use("/uploads", express.static("./uploads"));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(cors({
+    origin: true,
+    credentials: true,
+}));
 app.use(cookieParser());
 app.use(morgan(MORGAN_FORMAT));
 

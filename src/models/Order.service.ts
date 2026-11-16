@@ -27,6 +27,7 @@ class OrderService {
     const amount = input.reduce((accumulator: number, item: OrderItemInput) => {
       return accumulator + item.itemPrice * item.itemQuantity;
     }, 0);
+    console.log("amount:", amount);
     const delivery = amount < 100 ? 5 : 0;
 
     try {
@@ -110,9 +111,9 @@ public async updateOrder(
       {
         memberId: memberId,
         _id: orderId,
-      },
-      { orderStatus: orderStatus },
-      { new: true }
+      },// filter
+      { orderStatus: orderStatus },// update
+      { new: true }// options
     )
     .exec();
 

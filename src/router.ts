@@ -36,15 +36,15 @@ router.get("/product/:id",  memberController.retrieveAuth, productController.get
 
 /** Order **/ 
 router.post("/order/create",
-    memberController.verifyAuth,
+    memberController.verifyAuth,// auth 
     orderController.createOrder
 );
 router.get("/order/all",
-    memberController.verifyAuth,
+    memberController.verifyAuth,  // auth 
     orderController.getMyOrders
 );
 router.post("/order/update",
-    memberController.verifyAuth,
+    memberController.verifyAuth,// auth 
     orderController.updateOrder
 );
 export default router;
